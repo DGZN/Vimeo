@@ -20,13 +20,13 @@ else if(isset($_POST['csv_upload']) && isset($_FILES["file_csv"]["name"])){
 	if($file_type != 'csv'){
 		$content .= '
 		<p class="error">Only CSV files are accepted.</p>
-		<a href="'.$REDIRECT_URL.'">RETRY</a>
+		<a href="'.$REDIRECT_URI.'">RETRY</a>
 		';
 	}
 	else if(file_exists($target_file)){
 		$content .= '
 		<p class="error">This file already has been uploaded.</p>
-		<a href="'.$REDIRECT_URL.'">RETRY</a>
+		<a href="'.$REDIRECT_URI.'">RETRY</a>
 		';
 	}
 	else if(move_uploaded_file($_FILES['file_csv']['tmp_name'], $target_file)){
@@ -38,7 +38,7 @@ else if(isset($_POST['csv_upload']) && isset($_FILES["file_csv"]["name"])){
 	else{
 		$content .= '
 		<p class="error">There was a system error and the file could not be uploaded.</p>
-		<a href="'.$REDIRECT_URL.'">RETRY</a>
+		<a href="'.$REDIRECT_URI.'">RETRY</a>
 			';
 	}
 

@@ -33,6 +33,6 @@ else{
 
 }
 
-$content .= '<p><br><br><br><a href="'.$REDIRECT_URL.'?skip_auth=true">skip auth</a></p>';
+$content .= '<p><br><br><br><a href="'.$REDIRECT_URI.'?skip_auth=true">skip auth</a></p>';
 
 ?>
