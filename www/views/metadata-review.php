@@ -19,7 +19,7 @@ if(isset($_SESSION['csv_file'])){
 
 //map and clean up csv strings
 $field['title'] = (isset($csv[6][2])) ? $csv[6][2] : '';
-$field['category_title'] = (isset($csv[7][2])) ? strtolower($csv[7][2]) : '';
+$field['category_type'] = (isset($csv[7][2])) ? strtolower($csv[7][2]) : '';
 $field['asset_type'] = '';
 $field['description'] = (isset($csv[8][2])) ? $csv[8][2] : '';
 $field['year'] = (isset($csv[20][2])) ? $csv[20][2] : '';
